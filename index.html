@@ -1,0 +1,150 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>WeatherDashboar</title>
+  
+   
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+  <body onload="getLocation()">
+
+
+  <div class="container">
+    <div class="col-12 ">
+      <h1 class="display-4">Weather Dashboard</h1>
+      </div>
+      <!--Search City-->
+      <div class="row">
+        <div class="col-12 ">
+         
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Serch for City" aria-label="Recipient's username" aria-describedby="button-addon2" id="searchBar">
+  <div class="input-group-append">
+    <button class="btn btn btn-primary" type="button" id="button-addon2" onclick="searchBar()">Search</button>
+  </div>
+</div>
+        </div>
+      </div>  
+    <div class="displayTemp">
+    <!--Local Temp-->
+      <h1>City</h1><h1 class="display-4" id="cityName"><h1 class="display-4" id="icon"></h1>
+        
+        
+    
+      <h2>Temperature</h2><p class="lead" id="temp">.</p>
+      <h2>Humidity</h2><p class="lead" id="humi">.</p>
+      <h2>Wind Speed</h2><p class="lead" id="wind">.</p>
+      <h2>UV Index</h2><p class="lead" id="uvIndex">.</p>
+    <hr class="my-4">
+      <p>Next 6 Days Forecast</p>
+      <div class= "row">
+      <!--Day1-->   
+      <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Date:</div>
+          <div class="card-body text-primary">
+           <p>Temp</p><p class="lead" id="temp2">.</p>
+            <p>Humidility</p><p class="lead" id="humi2">.</p>
+          </div>
+        </div>
+      </div>
+        <!--Day2--> 
+        <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Date:</div>
+            <div class="card-body text-primary">
+              <p>Temp</p><p class="lead" id="temp3">.</p>
+              <p>Humidility</p><p class="lead" id="humi3">.</p>
+            </div>
+          </div>
+        </div>
+         <!--Day3--> 
+        <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+          <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Date:</div>
+            <div class="card-body text-primary">
+              <p>Temp</p><p class="lead" id="temp4">.</p>
+            <p>Humidility</p><p class="lead" id="humi4">.</p>
+            </div>
+          </div>
+        </div>
+          <!--Day4--> 
+          <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">Date:</div>
+              <div class="card-body text-primary">
+                <p>Temp</p><p class="lead" id="temp5">.</p>
+                <p>Humidility</p><p class="lead" id="humi5">.</p>
+              </div>
+            </div>
+          </div>
+      <!--Day5--> 
+      <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Date:</div>
+          <div class="card-body text-primary">
+            <p>Temp</p><p class="lead" id="temp6">.</p>
+            <p>Humidility</p><p class="lead" id="humi6">.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ccol-2 col-xl-2 col-lg-2 col-md-6 col-sm-12">
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+          <div class="card-header">Date:</div>
+          <div class="card-body text-primary">
+            <p>Temp</p><p class="lead" id="temp7">.</p>
+            <p>Humidility</p><p class="lead" id="humi7">.</p>
+          </div>
+        </div>
+      </div>
+      </div>  
+    </div>
+  </div>  
+    
+    
+   
+  
+  
+  
+ 
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
