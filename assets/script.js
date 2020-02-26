@@ -21,8 +21,9 @@ $.ajax({
   success: function (response) {
   console.log(response);
   resCopy=response;
-  uvresult()
   fillPage()
+  uvresult()
+  
 }
   })
 }
@@ -53,6 +54,8 @@ function searchBar(){
   async: true,
   dataType: "json",
   success: function (response) {
+
+    
   console.log(response);
   resCopy=response;
   uvresult()
@@ -92,31 +95,38 @@ $.ajax({
 //function call back info
 function fillPage(){
   $("#cityName").text(resCopy.city.name)
-  $("#icon").text(resCopy.list[0].sys.dt_txt)
+  $("#icon").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[6].weather[0].icon}@2x.png`);
   $("#temp").text(resCopy.list[0].main.temp)
   $("#humi").text(resCopy.list[0].main.humidity)
   $("#wind").text(resCopy.list[0].wind.speed)
 
+
 //day1
-  
+   
+$("#icon2").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[1].weather[0].icon}@2x.png`);
    $("#temp2").text(resCopy.list[1].main.temp)
    $("#humi2").text(resCopy.list[1].main.humidity)
 //day2
+  $("#icon3").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[8].weather[0].icon}@2x.png`);
   $("#temp3").text(resCopy.list[8].main.temp)
   $("#humi3").text(resCopy.list[8].main.humidity)
 //day3
+$("#icon4").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[16].weather[0].icon}@2x.png`);
 $("#temp4").text(resCopy.list[16].main.temp)
 $("#humi4").text(resCopy.list[16].main.humidity)
 
 //day4
+$("#icon5").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[24].weather[0].icon}@2x.png`);
 $("#temp5").text(resCopy.list[24].main.temp)
 $("#humi5").text(resCopy.list[24].main.humidity)
 
 //day5
+$("#icon6").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[32].weather[0].icon}@2x.png`);
 $("#temp6").text(resCopy.list[32].main.temp)
 $("#humi6").text(resCopy.list[32].main.humidity)
 
 //day6
+$("#icon7").attr("src", `http://openweathermap.org/img/wn/${resCopy.list[39].weather[0].icon}@2x.png`);
 $("#temp7").text(resCopy.list[39].main.temp)
 $("#humi7").text(resCopy.list[39].main.humidity)
 
